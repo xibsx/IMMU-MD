@@ -348,7 +348,7 @@ BotActivityFilter(conn);
     const ownerFilev2 = JSON.parse(fs.readFileSync('./assets/sudo.json', 'utf-8'));  
     
     let isCreator = [udp, ...jawadop, config.DEV + '@s.whatsapp.net', ...ownerFilev2]
-    .map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net') 
+    .map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net')
     .includes(mek.sender);
 	  
 

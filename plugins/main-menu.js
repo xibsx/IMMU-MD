@@ -285,8 +285,8 @@ let dec = `*╭────⬡ ${config.BOT_NAME} ⬡────⭓*
 *├▢ blackbox*
 *├▢ luma*
 *├▢ dj*
-*├▢ khan*
-*├▢ jawad*
+*├▢ immu*
+*├▢ askimad*
 *├▢ gpt4*
 *├▢ bing*
 *├▢ imagine*

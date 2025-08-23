@@ -175,8 +175,8 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
 *├▢ • blackbox <query>*
 *├▢ • luma <query>*
 *├▢ • meta <query>*
-*├▢ • khan <query>*
-*├▢ • jawad <query>*
+*├▢ • immu <query>*
+*├▢ • askimmu <query>*
 *╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)

@@ -1,7 +1,7 @@
 const { cmd, commands } = require('../command');
 const os = require("os");
 const { runtime } = require('../lib/functions');
-const config = require('../config'); // Assuming you have a config file
+const config = require('../config');
 
 cmd({
     pattern: "alive",
@@ -11,7 +11,7 @@ cmd({
     react: "🟢",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, reply }) => {
+async (conn, mek, m, { from, sender, reply }) => {
     try {
         const totalCmds = commands.length;
         const uptime = () => {
@@ -22,22 +22,22 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             return `${h}h ${m}m ${s}s`;
         };
 
-        const status = `╭─〔 *🤖 IMMU MD STATUS* 〕
+        const status = `╭─〔 *🤖 IMMU-MD STATUS* 〕
 │
 ├─ *🌐 Platform:* Heroku
 ├─ *📦 Mode:* ${config.MODE || 'private'}
-├─ *👑 Owner:* ${config.OWNER_NAME || 'JawadTechX'}
+├─ *👑 Owner:* ${config.OWNER_NAME || 'ImmuXRI'}
 ├─ *🔹 Prefix:* ${config.PREFIX || '.'}
 ├─ *🧩 Version:* 1.0.0 Beta
 ├─ *📁 Total Commands:* ${totalCmds}
 ├─ *⏱ Runtime:* ${uptime()}
 │
-╰─ *⚡ Powered by MMU-MD*`;
+╰─ *⚡ Powered by IMMU-MD*`;
 
         await conn.sendMessage(from, { 
             text: status,
             contextInfo: {
-                mentionedJid: [m.sender],
+                mentionedJid: [sender],   // ✅ FIXED
                 forwardingScore: 999,
                 isForwarded: true
             }

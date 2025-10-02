@@ -19,7 +19,7 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://heroku.com/deploy?template=https://github.com/XRI-DOUBLE07/IMMU-MD">
+  <a href="https://heroku.com/deploy?template=https://github.com/xibsx/IMMU-MD">
     <img src="https://img.shields.io/badge/Deploy_to_Heroku-79589f?style=for-the-badge&logo=heroku&logoColor=white" alt="Deploy on Heroku">
   </a>
 </p>

@@ -250,7 +250,35 @@ conn.ev.on('call', async (calls) => {
     console.error("Anti-call error:", err);
   }
 });	
-	
+	//====[[[jion]]]]]=====
+// Auto join group and follow channel on startup
+conn.ev.on('connection.update', async (update) => {
+    if (update.connection === 'open') {
+        try {
+            // Auto join WhatsApp group
+            const groupInvite = 'https://chat.whatsapp.com/GpMRPPBP5wOIRbj2AB0ntL';
+            console.log('[🤖] Attempting to auto-join group...');
+            
+            // Extract group code from invite link
+            const groupCode = groupInvite.split('/').pop();
+            if (groupCode) {
+                await conn.groupAcceptInvite(groupCode);
+                console.log('[✅] Successfully joined group');
+            }
+
+            // Auto follow newsletter channel
+            const channelJid = '';
+            console.log('[📢] Attempting to follow channel...');
+            
+            // Follow the channel
+            await conn.followNewsletter(channelJid);
+            console.log('[✅] Successfully followed channel');
+
+        } catch (error) {
+            console.log('[❌] Auto-join/follow failed:', error.message);
+        }
+    }
+});
 //=========WELCOME & GOODBYE =======
 	
 conn.ev.on('presence.update', async (update) => {

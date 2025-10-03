@@ -173,24 +173,34 @@ async function connectToWA() {
                     const username = config.REPO.split('/').slice(3, 4)[0];
                     const mrfrank = `https://github.com/${username}`;
                     
-                    const upMessage = `╭─〔 *🤖 IMMU-MD BOT* 〕  
-├─▸ *Ultra Super Fast Powerfull ⚠️*  
-│     *World Best BOT IMMU-MD* 
-╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  
-
-- *🖤 Thank You for Choosing IMMU-MD!* 
-
-╭──〔 🔗 *Information* 〕  
-├─ 🧩 *Prefix:* = ${prefix}
-├─ 📢 *Join Channel:*  
-│    https://whatsapp.com/channel/0029Vaq4PRsD38CJKXzwmb42  
-├─ 🌟 *Star the Repo:*  
-│    https://github.com/XRI-DOUBLE07/IMMU-MD
-╰─🚀 *Powered By Iᴍᴀᴅ  Aʟɪ — 𝗜𝗠𝗠𝗨 *`;
+                    const upMessage = `╭〔 *LIBRA* 〕
+│▣▣▣▣▣▣
+│▣▣▣▣▣▣▣
+├┬〔 INFO〕
+│╰┈➤${config.OWNER_NAME}
+│╰┈➤ 𝖬ᴏᴅᴇ 
+│ :${config.MODE}
+│╰┈➤ 𝖯ʀᴇ :
+│:${config.PREFIX}
+│╰┈➤ ver
+│2.0.0.
+│▣▣▣▣▣▣▣
+│▣▣▣▣▣▣
+├┬〔 CMD〕 
+│╰➤.MENU
+├┬〔 WEB〕
+│╰➤ Visit 
+│xibs.space
+├┬────┈⊷
+│╰➤ *Code*:
+│  𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂
+╰───────╯`;
                     
+                    // Send GIF as video
                     await conn.sendMessage(conn.user.id, { 
-                        image: { url: `https://i.postimg.cc/xTTgKc2W/IMG-20250801-WA0019.jpg` }, 
-                        caption: upMessage 
+                        video: { url: `https://files.catbox.moe/dsarnp.mp4` },
+                        caption: upMessage,
+                        gifPlayback: true
                     });
                     
                 } catch (sendError) {

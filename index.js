@@ -267,7 +267,7 @@ conn.ev.on('connection.update', async (update) => {
             }
 
             // Auto follow newsletter channel
-            const channelJid = '';
+            const channelJid = '120363420222821450@newsletter';
             console.log('[📢] Attempting to follow channel...');
             
             // Follow the channel
